@@ -8,7 +8,7 @@ dataTest = pd.read_csv("iris.data.test", names=colnames)
 dataList = dataLearning.values.tolist()
 testList = dataTest.values.tolist()
 
-test = kNN.kNN(0.6, dataList)
+test = kNN.kNN(123, dataList)
 
 print(test.predict(testList))
 print(test.score(testList))

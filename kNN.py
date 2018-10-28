@@ -20,8 +20,7 @@ class kNN:
             dist.clear()
             numberOfOcurrencies.clear()
             i = 0
-            k=0
-            maxIndex = 0
+            m = 0
             max = 0
             prediction = ''
 
@@ -33,15 +32,15 @@ class kNN:
 
             dist.sort(key=lambda dist:dist[0])
 
-            while(dist[maxIndex][0] < self.k):
-                if dist[maxIndex][1] in numberOfOcurrencies:
-                    temporary = numberOfOcurrencies[dist[maxIndex][1]] + 1
-                    del numberOfOcurrencies[dist[maxIndex][1]]
-                    numberOfOcurrencies[dist[maxIndex][1]] = temporary
+            while(m < len(dist) and m < self.k):
+                if dist[m][1] in numberOfOcurrencies:
+                    temporary = numberOfOcurrencies[dist[m][1]] + 1
+                    del numberOfOcurrencies[dist[m][1]]
+                    numberOfOcurrencies[dist[m][1]] = temporary
                 else:
-                    numberOfOcurrencies[dist[maxIndex][1]] = 1
+                    numberOfOcurrencies[dist[m][1]] = 1
 
-                maxIndex += 1
+                m += 1
 
             for item in numberOfOcurrencies:
                 if numberOfOcurrencies[item] > max:
@@ -63,8 +62,7 @@ class kNN:
             dist.clear()
             numberOfOcurrencies.clear()
             i = 0
-            k=0
-            maxIndex = 0
+            m=0
             max = 0
             prediction = ''
 
@@ -76,15 +74,15 @@ class kNN:
 
             dist.sort(key=lambda dist:dist[0])
 
-            while(dist[maxIndex][0] < self.k):
-                if dist[maxIndex][1] in numberOfOcurrencies:
-                    temporary = numberOfOcurrencies[dist[maxIndex][1]] + 1
-                    del numberOfOcurrencies[dist[maxIndex][1]]
-                    numberOfOcurrencies[dist[maxIndex][1]] = temporary
+            while(m < len(dist) and m < self.k):
+                if dist[m][1] in numberOfOcurrencies:
+                    temporary = numberOfOcurrencies[dist[m][1]] + 1
+                    del numberOfOcurrencies[dist[m][1]]
+                    numberOfOcurrencies[dist[m][1]] = temporary
                 else:
-                    numberOfOcurrencies[dist[maxIndex][1]] = 1
+                    numberOfOcurrencies[dist[m][1]] = 1
 
-                maxIndex += 1
+                m += 1
 
             for item in numberOfOcurrencies:
                 if numberOfOcurrencies[item] > max:
