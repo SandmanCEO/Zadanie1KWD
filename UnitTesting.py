@@ -17,8 +17,8 @@ class TestkNN(unittest.TestCase):
         self.assertIsNotNone(test.predict(testList))
 
     def test_score(self):
-        self.assertGreater(test.score(testList), 0)
-        self.assertLess(test.score(testList), 1)
+        self.assertGreaterEqual(test.score(testList), 0)
+        self.assertLessEqual(test.score(testList), 1)
 
-if __name__ == '__main__':
-    unittest.main()
+"""if __name__ == '__main__':
+    unittest.main()"""
