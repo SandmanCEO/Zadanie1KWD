@@ -14,7 +14,7 @@ test = kNN.kNN(123, dataList)
 class TestkNN(unittest.TestCase):
 
     def test_predict(self):
-        self.assertIsNone(test.predict(testList))
+        self.assertIsNotNone(test.predict(testList))
 
     def test_score(self):
         self.assertGreater(test.score(testList), 0)
