@@ -14,10 +14,3 @@ test = kNN.kNN(121, dataList)
 
 print(test.predict(testList))
 print(test.score(testList))
-
-""" DALEJ JEST ZMIENIONE """
-
-UnitTesting.TestkNN.test_predict(unittest.TestCase)
-
-if __name__ == '__main__':
-    unittest.main()
