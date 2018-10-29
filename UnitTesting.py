@@ -13,4 +13,5 @@ class TestkNN(unittest.TestCase):
         self.assertLessEqual(Main.test.score(Main.testList), 1)
 
 if __name__ == '__main__':
+    print("\n       UNIT TESTS EXECUTION RESULT:        \n")
     unittest.main()
