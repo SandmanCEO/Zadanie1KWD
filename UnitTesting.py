@@ -11,7 +11,6 @@ class TestkNN(unittest.TestCase):
     def test_score(self):
         self.assertGreaterEqual(Main.test.score(Main.testList), 0)
         self.assertLessEqual(Main.test.score(Main.testList), 1)
-"""
+
 if __name__ == '__main__':
     unittest.main()
-"""
