@@ -12,5 +12,7 @@ testList = dataTest.values.tolist()
 
 test = kNN.kNN(121, dataList)
 
+print("\n       PREDICT  FUNCTION RESULT:        \n")
 print(test.predict(testList))
+print("\n       SCORE  FUNCTION RESULT:        \n")
 print(test.score(testList))
